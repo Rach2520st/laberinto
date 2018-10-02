@@ -3,6 +3,7 @@
 import turtle
 import os
 pantalla = turtle.Screen()
+turtle.shape("square")
 pantalla.bgcolor("white")
 pantalla.title("El Grandioso laberinto")
 pantalla.setup(700, 700)
@@ -11,22 +12,21 @@ pantalla.setup(700, 700)
 cont = 0
 
 class Dibujar():
-    def _iniciar_(self):
-        turtle._iniciar_(self)
-        self.shape("square")
-        self.color("white")
-        self.penup()
-        self.speed(0)
+    def _init_(self):
+        turtle._init_(self)
+        turtle.shape("square")
+        turtle.color("black")
+        turtle.penup()
+        turtle.speed(0)
 
 """el próximo bloque tiene la función de definir e integrar el jugador al juego como un objeto"""
 class Jugador():
-    def __iniciar__(self):
-        turtle.turtle._iniciar_(self)
-        self.shape("square")
-        self.color("red")
-        self.penup()
-        self.speed(0)
-
+    def _init_(self):
+        turtle._init_(self)
+        turtle.shape("circle")
+        turtle.color("red")
+        turtle.penup()
+        turtle.speed(0)
     cont = 0
     """las proximos cuatro bucles son para brindar movimiento al jugador"""
 
@@ -86,7 +86,7 @@ xxxxx        xxxxxxxxxxx
 xxxxxxx xx xx       xxxx
 xxxx    xx    x x xxxxxx
 xxxx xx xxxxx xxx xxxxxx
-xxxxxxx xxxxx x    xxxxxx
+xxxxxxx xxxxx x    xxxxx
 xxxxxxx       x x   xxxx
 xxxxxxx xxxxx   x x xxxx
 xxxxxxx xxxxxxxxx x xxxx
@@ -117,9 +117,7 @@ def configuracion_lab(niveles):
                 jugador.posicionar(pantalla_x, pantalla_y)
             if character == "F":
                 """ultima coordenada""" 
-                final = (pantalla_x, pantalla_y)
-
-
+            final = (pantalla_x, pantalla_y)
             os.system("clear")
             print("""~FELICIDADES AVENTURERO~
                           ¡HAZ GANADO!""")
