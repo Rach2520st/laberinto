@@ -29,3 +29,5 @@ para el movimiento del jugador se emplea una librería que permite el uso de las
 para revisar si el jugador se topa con un muro es ingresada una función llamada "cuadradito", esta separa el "nivel" y lo convierte en muchos arreglos (la cantidad de filas) para que cuando se este moviendo está función entregue el valor de la posición a la que va a avanzar y según una condicional presente en la función "dibujar" permita que si el caracter contenido allí es diferente a X el jugador se mueva y si es igual a X el jugador se mantenga tal y como estaba.
 
 el menú es una función que permite mediante un while la elección de dos opciones(salir del juego o volvera jugar), para volver a jugar se debe llamar a la función "reiniciar", esta hace que el jugador vuelva a la posición inicial; y luego se vuelve a llamar a la función "juego", para volver a jugar; para salir simplemente se utiliza la función exit que viene incorparada mediante la librería estándar de Python. 
+
+Autor y creador del programa: Rachell Scarlett Aravena Martínez
